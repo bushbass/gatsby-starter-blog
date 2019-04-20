@@ -1,6 +1,6 @@
 /**
  * Bio component that queries for data
- * with Gatsby's StaticQuery component
+ * with Gatsby's StaticQuery components
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
@@ -38,8 +38,10 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
+              Written by <strong>{author}</strong> who lives in Northwest New
+              Jersey. I'm homeschooling my two young children and am pursuing a
+              career in web development so my wife (who is actually a teacher)
+              can be the one who stays home with the kids.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter
@@ -54,7 +56,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/me-hat-tiles-200x200.jpeg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
